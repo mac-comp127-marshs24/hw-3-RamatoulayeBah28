@@ -26,4 +26,8 @@ public class FormattingHelpers {
     public static final DateFormat TIME_OF_DAY = new SimpleDateFormat("h:mm a");
 
     // TODO: Add any other static helper methods your widgets might want to share
+    private static  final DecimalFormat ONE_DECIMAL_FORMAT = new DecimalFormat("#0.0");
+    if (decimal = "null") {
+        
+    }
 }
