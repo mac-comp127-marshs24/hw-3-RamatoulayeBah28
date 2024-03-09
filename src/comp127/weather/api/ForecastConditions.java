@@ -101,6 +101,14 @@ public class ForecastConditions extends Conditions {
         maxTemperature += delta;
     }
 
+    public boolean isRainbowWeatherComing() {
+        // Conditions for a rainbow: rain, partly cloudy or clear skies, and sunlight
+        return cloudCoverage != null && cloudCoverage <= 50
+                && temperature != null && temperature >= 55
+                && windSpeed != null && windSpeed < 10
+                && weatherDescription != null && weatherDescription.toLowerCase().contains("rain");
+    }
+
     @Override
     public String toString() {
         return "ForecastConditions{"

@@ -17,7 +17,7 @@ public class SingleWidgetTest {
     private static WeatherWidget makeWidget(double size) {
         // Replace TemperatureWidget with your own widget to test
         //         ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
-        return new TemperatureWidget(size);
+        return new WindWeatherWidget(size);
     }
 
     // –––––– Test code ––––––

@@ -99,4 +99,17 @@ public abstract class Conditions {
     public String getWeatherIcon() {
         return "condition-icons/" + (weatherIconFile != null ? weatherIconFile : "unknown") + ".png";
     }
+
+    public boolean isRainbowWeather() {
+        // Conditions for a rainbow: no rain, partly cloudy or clear skies, and sunlight
+        // return cloudCoverage != null && cloudCoverage <= 50
+        //         && temperature != null && temperature >= 55
+        //         && windSpeed != null && windSpeed < 10;
+        // Conditions for a rainbow: rain, partly cloudy or clear skies, and sunlight
+        return cloudCoverage != null && cloudCoverage <= 50
+                && temperature != null && temperature >= 55
+                && windSpeed != null && windSpeed < 10
+                && weatherDescription != null && weatherDescription.toLowerCase().contains("rain");
+    }
 }
+
