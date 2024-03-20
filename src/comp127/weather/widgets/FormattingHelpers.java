@@ -26,4 +26,23 @@ public class FormattingHelpers {
     public static final DateFormat TIME_OF_DAY = new SimpleDateFormat("h:mm a");
 
     // TODO: Add any other static helper methods your widgets might want to share
+    public static String checkNull(Double decimal) {
+        if (decimal != null) {
+            return ONE_DECIMAL_PLACE.format(decimal);
+        }
+        else {
+            return "-";
+        } 
+    }
+
+    public static String windFormat(Double windSpeed) {
+        // double windSpeed = currentConditions.getWindSpeed();
+        return String.format("%.1f", windSpeed);
+    }
+    public static String formatTemperature(Double temperature) {
+        if (temperature == null) {
+            return "N/A";
+        }
+        return ONE_DECIMAL_PLACE.format(temperature);
+    }
 }
